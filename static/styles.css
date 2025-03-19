@@ -1,0 +1,38 @@
+body {
+    background-color: #EAE6DB; /* Светлый фон */
+    color: #0F7055; /* Темный текст */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #F199BF; /* Розовый заголовок */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #F199BF; /* Розовый фон для задач */
+    color: white; /* Белый текст на розовом фоне */
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px; /* Скругленные углы */
+}
+
+button {
+    background-color: #0F7055; /* Темно-зеленая кнопка */
+    color: white; /* Белый текст на кнопке */
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer; /* Указатель при наведении */
+}
+
+button:hover {
+    background-color: #EAE6DB; /* Светлый фон при наведении */
+    color: #0F7055; /* Темный текст при наведении */
+}

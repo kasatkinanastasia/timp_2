@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Список задач</title>
+</head>
+<body>
+    <h1>Список задач</h1>
+
+    <form action="/add" method="post">
+        <input type="text" name="task" placeholder="Введите задачу" required>
+        <button type="submit">Добавить задачу</button>
+    </form>
+
+    <ul>
+        {% for task in tasks %}
+            <li style="text-decoration: {{ 'line-through' if task['completed'] else 'none' }};">
+                <form action="/complete/{{ task['id'] }}" method="post" style="display:inline;">
+                    <button type="submit">{{ '✅' if task['completed'] else '❌' }}</button>
+                </form>
+                {{ task['title'] }}
+                <a href="/edit/{{ task['id'] }}">Редактировать</a>
+                <a href="/delete/{{ task['id'] }}">Удалить</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
