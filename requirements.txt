@@ -1,0 +1,4 @@
+flask
+pytest
+httpx
+sqlite3
